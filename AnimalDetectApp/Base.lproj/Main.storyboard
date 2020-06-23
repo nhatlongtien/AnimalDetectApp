@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="AnimalDetectApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iml-36-dHw">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pa0-JG-v7c">
+                                        <rect key="frame" x="10" y="5.5" width="40" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="74d-eU-4bf"/>
+                                            <constraint firstAttribute="height" constant="40" id="8Xr-VV-yGT"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" backgroundImage="camera.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="cameraButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EtS-8f-WL8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OhC-Go-Cc9"/>
+                                    <constraint firstItem="pa0-JG-v7c" firstAttribute="centerY" secondItem="iml-36-dHw" secondAttribute="centerY" id="g7F-hF-sPu"/>
+                                    <constraint firstItem="pa0-JG-v7c" firstAttribute="leading" secondItem="iml-36-dHw" secondAttribute="leading" constant="10" id="uoA-dn-bHc"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fu9-cP-yXA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKY-8c-LNm" customClass="RoundedVisualEffect" customModule="AnimalDetectApp" customModuleProvider="target">
+                                <rect key="frame" x="16" y="507" width="343" height="90"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cmR-89-JYp">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="90"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the camera button to choose an image " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eD-RJ-ODc">
+                                            <rect key="frame" x="20" y="10" width="303" height="70"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="4eD-RJ-ODc" secondAttribute="trailing" constant="20" id="61R-eo-tYc"/>
+                                        <constraint firstAttribute="bottom" secondItem="4eD-RJ-ODc" secondAttribute="bottom" constant="10" id="FBk-3e-f4S"/>
+                                        <constraint firstItem="4eD-RJ-ODc" firstAttribute="top" secondItem="cmR-89-JYp" secondAttribute="top" constant="10" id="Ysz-Gd-CbZ"/>
+                                        <constraint firstItem="4eD-RJ-ODc" firstAttribute="leading" secondItem="cmR-89-JYp" secondAttribute="leading" constant="20" id="hdu-hX-Mxd"/>
+                                    </constraints>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="lN0-VM-rnF"/>
+                                </constraints>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wKY-8c-LNm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7kf-iu-BH6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wKY-8c-LNm" secondAttribute="trailing" constant="16" id="I4q-qi-cRp"/>
+                            <constraint firstItem="iml-36-dHw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LAR-Yl-DXj"/>
+                            <constraint firstAttribute="bottom" secondItem="iml-36-dHw" secondAttribute="bottom" id="MYC-dl-LoB"/>
+                            <constraint firstItem="iml-36-dHw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xzw-00-9vD"/>
+                            <constraint firstItem="iml-36-dHw" firstAttribute="top" secondItem="Fu9-cP-yXA" secondAttribute="bottom" id="deP-0E-JsQ"/>
+                            <constraint firstItem="iml-36-dHw" firstAttribute="top" secondItem="wKY-8c-LNm" secondAttribute="bottom" constant="20" id="jfx-aj-80C"/>
+                            <constraint firstItem="Fu9-cP-yXA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="u32-Y2-7Xo"/>
+                            <constraint firstItem="Fu9-cP-yXA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xoM-hj-zcc"/>
+                            <constraint firstItem="Fu9-cP-yXA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zMj-z9-p1a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="classificationLabel" destination="4eD-RJ-ODc" id="cE3-0W-zNx"/>
+                        <outlet property="imageView" destination="Fu9-cP-yXA" id="1PG-yB-pZ1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.fill" catalog="system" width="128" height="96"/>
+    </resources>
+</document>
